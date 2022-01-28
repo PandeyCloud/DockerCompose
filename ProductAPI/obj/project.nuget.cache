@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6jrJxDmTXYdnn75mak9zczGeX6JaJHqRwdyBAJm4J+zglJpiPXLsht8OjRykP1omtT3742HhvyxrE8ts3CA/lQ==",
+  "success": true,
+  "projectFilePath": "E:\\Work\\Learning\\DotNetCore\\DockerCompose\\ProductAPI\\ProductAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gpandey\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}
