@@ -25,8 +25,10 @@ namespace WebFrontEnd.Pages
             {
                 // Call *mywebapi*, and display its response in the page
                 var request = new System.Net.Http.HttpRequestMessage();
+                // To use in localhost and port of API
                 //request.RequestUri = new Uri("http://localhost:32316/weatherforecast");
-                request.RequestUri = new Uri("http://mywebapi:32316/weatherforecast");
+                // To use in Docker comopose via service name of API.
+                request.RequestUri = new Uri("http://mywebapi:80/weatherforecast");
                 var response = await client.GetAsync(request.RequestUri);
                 ViewData["Message"] += " and " + await response.Content.ReadAsStringAsync();
             }

@@ -1,4 +1,14 @@
 services:
+  databases:
+    environment:
+      MYSQL_DATABASE: dockerComposeDemo
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+    image: mysql
+    ports:
+    - published: 3306
+      target: 3306
   mywebapi:
     build:
       context: E:\Work\Learning\DotNetCore\DockerCompose
@@ -7,8 +17,6 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
     image: mywebapi
     ports:
-    - published: 32316
-      target: 80
     - target: 80
   webfrontend:
     build:

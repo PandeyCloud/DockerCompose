@@ -1,6 +1,16 @@
 version: '3.4'
 
 services:
+  #databases:
+  #  image: mysql
+  #  ports:
+  #  - "3306:3306"
+  #  environment:
+  #  - MYSQL_ROOT_PASSWORD=password
+  #  - MYSQL_USER=user
+  #  - MYSQL_PASSWORD=password
+  #  - MYSQL_DATABASE=dockerComposeDemo
+
   webfrontend:
     image: ${DOCKER_REGISTRY-}webfrontend
     build:

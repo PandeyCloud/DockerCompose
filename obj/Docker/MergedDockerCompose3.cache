@@ -1,4 +1,14 @@
 services:
+  databases:
+    environment:
+      MYSQL_DATABASE: dockerComposeDemo
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+    image: mysql
+    ports:
+    - published: 3306
+      target: 3306
   mywebapi:
     build:
       context: E:\Work\Learning\DotNetCore\DockerCompose
@@ -25,8 +35,6 @@ services:
       com.microsoft.visualstudio.debuggee.program: '"C:\Program Files\dotnet\dotnet.exe"'
       com.microsoft.visualstudio.debuggee.workingdirectory: C:\app
     ports:
-    - published: 32316
-      target: 80
     - target: 80
     volumes:
     - C:\Users\gpandey\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
